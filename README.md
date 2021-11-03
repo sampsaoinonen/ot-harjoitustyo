@@ -11,6 +11,6 @@ sekä *harjoitustyö*.
 * [gitlog.txt](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/laskarit/gitlog.txt)
 
 **muutos paikalliseen**
-
+*muutos vain paikalliseen*
 > Experience is the name everyone gives to their mistakes. :laughing: 
 > – Oscar Wilde
