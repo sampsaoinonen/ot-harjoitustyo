@@ -1,0 +1,115 @@
+commit d65afecf7a2ee18f5f3a47d8197e14135b3440e7
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 19:05:01 2021 +0200
+
+    rm file1 ja mv file2 file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a4619ba0f40511ded83e1bea06ada5853918a799
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 18:58:35 2021 +0200
+
+    file1 file2 file3
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 81666f5b479c5115d7a453155a94c61483b25fb3
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 18:39:10 2021 +0200
+
+    eka.txt ja kolmas.txt muutokset
+
+ eka.txt    | 1 +
+ kolmas.txt | 3 +++
+ 2 files changed, 4 insertions(+)
+
+commit 7cf344fc9d520689d30f670e4c4013724b4c093d
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 16:08:53 2021 +0200
+
+    tiedosto.txt muutettu eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 083296450fe932edf974eb364c0803f087ed83eb
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 16:06:51 2021 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 6fc0d743fa010d522ca791a6428c5af97e5d48bd
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 16:00:38 2021 +0200
+
+    poistettu tekstiaja lisatty tekstiä tiedosto.txt
+
+ tiedosto.txt | 11 ++++-------
+ 1 file changed, 4 insertions(+), 7 deletions(-)
+
+commit aeac5d81faf27b915cc88e10d2693262363700d9
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 15:56:19 2021 +0200
+
+    paljon tekstia lisatty tiedosto.txt
+
+ tiedosto.txt | 44 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 44 insertions(+)
+
+commit 07234cc671b9ce7326841228a6306c7827cee90c
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 07:36:29 2021 +0200
+
+    stuff lisatty
+
+ stuff/tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 465626525e2a0a53886214e9425af2755c5374d5
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 07:35:07 2021 +0200
+
+    muutokset toiseen ja kolmanteen
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 67e3cf43c182be9989d96cb6bb67fbd02636ad54
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 07:33:27 2021 +0200
+
+    kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0a45a4df3969e7786e6e1b47f29a3d4dc66865dc
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 07:26:32 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 2 ++
+ toinen.txt   | 0
+ 2 files changed, 2 insertions(+)
+
+commit aea923049fbac5bfe5886001cd08f93065025b9d
+Author: sampsaoinonen <80003556+sampsaoinonen@users.noreply.github.com>
+Date:   Tue Nov 2 07:24:01 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+
