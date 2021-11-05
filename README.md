@@ -7,8 +7,8 @@ sekä *harjoitustyö*.
 
 ##### VIIKKO 1
 
-* [komentorivi.txt](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/laskarit/komentorivi.txt)
-* [gitlog.txt](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/laskarit/gitlog.txt)
+* [komentorivi.txt](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+* [gitlog.txt](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
 **muutos paikalliseen**
 *muutos vain paikalliseen*
