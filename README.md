@@ -14,3 +14,14 @@ sekä *harjoitustyö*.
 *muutos vain paikalliseen*
 > Experience is the name everyone gives to their mistakes. :laughing: 
 > – Oscar Wilde
+
+##### VIIKKO 2
+
+* [Maksukortti](https://github.com/sampsaoinonen/ot-harjoitustyo/tree/master/laskarit/viikko2/maksukortti)
+* [Unicafe](https://github.com/sampsaoinonen/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe)
+* [Testikattavuusraportti](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/laskarit/viikko2/Coverage_report_screenshot.png)
+
+### HARJOITUSTYÖ
+
+* [Vaatimusmäärittely]
+* [Tuntikirjanpito]
