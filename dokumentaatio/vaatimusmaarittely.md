@@ -2,7 +2,7 @@
 
 ## Sovelluksen tarkoitus
 
-Sovellus on Pythonilla ja Pygamella toteutettu Nokia-puhelimista tuttu matopeli. Pelissä matoa(tai tässä tapauksessa käärmettä) kasvatetaan syömällä omenoita samalla väistäen seiniä sekä madon kasvavaa häntää. Peli loppuu kun mato törmää seinään tai itseensä. 
+Sovellus on Pythonilla ja Pygamella toteutettu Nokia-puhelimista tuttu matopeli. Pelissä käärmettä kasvatetaan syömällä omenoita samalla väistäen seiniä sekä käärmeen kasvavaa häntää. Peli loppuu kun käärme törmää seinään tai itseensä. 
 
 ## Käyttäjät
 
@@ -24,9 +24,9 @@ Peli on yksinpeli ja käyttäjällä on roolina vain pelaaja. Käyttäjä kirjau
 
 ### Pelinäkymä
 
-- Pelaaja ohjaa matoa nuolinäppäimillä keräten omenoita ja väistellen seiniä sekä madon häntää.
+- Pelaaja ohjaa matoa nuolinäppäimillä keräten omenoita ja väistellen seiniä sekä käärmeen häntää.
 - Ruudun yläreunoissa näkyy kerätyt pisteet sekä käyttäjän nimi
-- Osuma seinään tai madon häntään lopettaa pelin ja siirtyy Game Over-näkymään.
+- Osuma seinään tai käärmeen häntään lopettaa pelin ja siirtyy Game Over-näkymään.
 
 ### Game Over-näkymä
 
@@ -46,4 +46,4 @@ Peli on yksinpeli ja käyttäjällä on roolina vain pelaaja. Käyttäjä kirjau
 
 - Kaksinpeli paikallisesti samalla tietokoneella
 - Vaikeusasteen muuttaminen(nopeus, pituuden lisäys omenasta)
-- Peli tietokonetta vastaan, jossa molemmilla oma mato, mutta yhteiset kerättävät omenat
+- Peli tietokonetta vastaan, jossa molemmilla oma käärme, mutta yhteiset kerättävät omenat
