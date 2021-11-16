@@ -40,6 +40,8 @@ Peli on yksinpeli ja käyttäjällä on roolina vain pelaaja. Käyttäjä kirjau
 - Näkymässä näytetään 10 parasta nimimerkkiä pisteineen
 - Näkymästä pääsee painamalla mitä tahansa näppäintä alkunäkymään
 
+![Käyttöliittymäluonnos](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliittymaluonnos.png)
+
 ## Jatkokehitysideat
 
 - Kaksinpeli paikallisesti samalla tietokoneella
