@@ -9,6 +9,7 @@
 | 23.11.| 4    | Pythonin kertausta |
 | 25.11.| 3    | Spriten haltuunottoa|
 | 26.11.| 3    | Objektien liikuttaminen |
-| 28.11.| 3    | Madon törmääminen seinään ja itseen |
+| 28.11.| 4    | Madon törmääminen seinään ja itseen |
 | 29.11.| 6    | Madon kasvattaminen sekä pisteiden lasku|
 | 29.11.| 2    | Testien tekoa |
+| 30.11.| 10   | Ohjelman rakenteen muokkaamista |

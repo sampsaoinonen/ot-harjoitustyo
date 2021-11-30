@@ -1,5 +1,5 @@
 import unittest
-from snake import Snake 
+from sprites.snake import Snake 
 
 class testSnake(unittest.TestCase):   
     def setUp(self):
@@ -9,6 +9,9 @@ class testSnake(unittest.TestCase):
         self.assertEqual(self.snake.rect.x, 320)
         self.assertEqual(self.snake.rect.y, 240)
             
-
+    def test_move_changes_x_and_y(self):
+        self.snake.move(10, 10)
+        self.assertEqual(self.snake.rect.x, 330)
+        self.assertEqual(self.snake.rect.y, 250)
     
 
