@@ -12,8 +12,7 @@ class Snake(pygame.sprite.Sprite):
     def move(self, dx, dy):
         self.rect.move_ip(dx, dy)
 
-    def colliding_walls(self):
-        pass
+    
 
     
  
