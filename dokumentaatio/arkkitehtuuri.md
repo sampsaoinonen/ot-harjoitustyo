@@ -1,0 +1,2 @@
+![arkkitehtuuri](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.png)
+![sekvenssikaavio](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssikaavio.png)

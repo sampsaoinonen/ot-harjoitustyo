@@ -41,4 +41,4 @@ poetry run invoke pylint
 
 * [Vaatimusmäärittely](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 * [Tuntikirjanpito](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
-* [Arkkitehtuuri](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.png)(https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssikaavio.png)
+* [Arkkitehtuuri](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
