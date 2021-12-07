@@ -4,7 +4,7 @@
 /laskarit/viikko2/unicafe/.coverage
 /laskarit/viikko2/unicafe/htmlcov
 src/__pycache__/
-.coverage
+/.coverage
 /src/tests/__pycache__/
 /scr/.coverage
 /scr/.coveragerc
