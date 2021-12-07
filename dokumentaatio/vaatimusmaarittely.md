@@ -24,9 +24,9 @@ Peli on yksinpeli ja käyttäjällä on roolina vain pelaaja. Käyttäjä kirjau
 
 ### Pelinäkymä
 
-- Pelaaja ohjaa käärmettä nuolinäppäimillä keräten omenoita ja väistellen seiniä sekä käärmeen häntää.
-- Ruudun yläreunoissa näkyy kerätyt pisteet sekä käyttäjän nimi
-- Osuma seinään tai käärmeen häntään lopettaa pelin ja siirtyy Game Over-näkymään.
+- Pelaaja ohjaa käärmettä nuolinäppäimillä keräten omenoita ja väistellen seiniä sekä käärmeen häntää. .. TEHTY
+- Ruudun yläreunoissa näkyy kerätyt pisteet sekä käyttäjän nimi .. TEHTY lukuunottamatta käyttäjänäkymää
+- Osuma seinään tai käärmeen häntään lopettaa pelin ja siirtyy Game Over-näkymään. .. TEHTY lukuunottamatta Game Over-näkymää
 
 ### Game Over-näkymä
 
