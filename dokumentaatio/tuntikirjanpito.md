@@ -13,3 +13,8 @@
 | 29.11.| 6    | Madon kasvattaminen sekä pisteiden lasku|
 | 29.11.| 2    | Testien tekoa |
 | 30.11.| 10   | Ohjelman rakenteen muokkaamista |
+| 2.12. | 4    | Madon kasvattamista edelleen |
+| 4.12. | 3    | Törmäykset seiniin ja itseensä |
+| 6.12. | 3    | Pylint pistemäärän kasvattamista |
+| 7.11. | 3    | Ohjelman rakenteen muokkaamista, sekvessikaavio ja toiminnallisuuden parantaminen |
+| yht.  | 52.5 |

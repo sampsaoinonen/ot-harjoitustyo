@@ -1,8 +1,9 @@
 import pygame
 
-
 class GameLoop:
-    def __init__(self, level, renderer, event_queue, clock, cell_size, BG_COLOR, display):
+    '''Sets up every thing needed to run event loop'''
+
+    def __init__(self, level, renderer, event_queue, clock, cell_size, display_width, display_height):
         self._level = level
         self._renderer = renderer
         self._event_queue = event_queue
@@ -11,26 +12,28 @@ class GameLoop:
         self._direction = ""
         self._x_change = 0
         self._y_change = 0
-        self._BG_COLOR = BG_COLOR
-        self._display = display
-        
+        self._display_width = display_width
+        self._display_height = display_height
 
     def start(self):
         while True:
+            self._level.moving_snake_tail()
             if self._handle_events() == False:
                 break
+            current_time = self._clock.get_ticks()##
 
-            self._level.update()
-            self._render()                        
-            self._level.move_snake(self._x_change, self._y_change)            
+            self._render()
+            if self._level.crashed(self._display_width, self._display_height):
+                break  # game over here!
             self._clock.tick(10)
 
     def _handle_events(self):
         for event in pygame.event.get():
-            if event.type == pygame.KEYDOWN:                
-                if event.key == pygame.K_LEFT and self._direction != "right": #lets make sure snake cannot turn the opposite direction
-                    self._x_change = (-self._cell_size) 
-                    self._y_change = 0                    
+            if event.type == pygame.KEYDOWN:
+                ''' lets make sure snake cannot turn the opposite direction '''
+                if event.key == pygame.K_LEFT and self._direction != "right":
+                    self._x_change = (-self._cell_size)
+                    self._y_change = 0
                     self._direction = "left"
                 if event.key == pygame.K_RIGHT and self._direction != "left":
                     self._x_change = (self._cell_size)
@@ -43,10 +46,11 @@ class GameLoop:
                 if event.key == pygame.K_DOWN and self._direction != "up":
                     self._x_change = 0
                     self._y_change = (self._cell_size)
-                    self._direction = "down"                                         
-                
-            elif event.type == pygame.QUIT:
-                return False                        
+                    self._direction = "down"
+
+            elif event.type == pygame.QUIT:                
+                return False
+        self._level.move_snake(self._x_change, self._y_change)
 
     def _render(self):
         self._renderer.render()

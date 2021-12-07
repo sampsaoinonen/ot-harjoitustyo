@@ -6,7 +6,7 @@ from renderer import Renderer
 from clock import Clock
 
 CELL_SIZE = 20
-BG_COLOR = (0,0,0)
+BG_COLOR = (0, 0, 0)
 
 
 def main():
@@ -14,11 +14,13 @@ def main():
     display_height = 480
     display = pygame.display.set_mode((display_width, display_height))
     pygame.display.set_caption("JakeTheSnake")
-    level = Level(CELL_SIZE)
+
+    level = Level()
     event_queue = EventQueue()
     renderer = Renderer(display, level, BG_COLOR)
     clock = Clock()
-    game_loop = GameLoop(level, renderer, event_queue, clock, CELL_SIZE, BG_COLOR, display)
+    game_loop = GameLoop(level, renderer, event_queue,
+                         clock, CELL_SIZE, display_width, display_height)
 
     pygame.init()
     game_loop.start()
