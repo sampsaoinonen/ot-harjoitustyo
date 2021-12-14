@@ -4,7 +4,7 @@ from load_image import load_image
 
 
 class Snake(pygame.sprite.Sprite):
-    """ Creates a movable sprite """
+    """ Creates a movable snake sprite in the middle of the display """
 
     def __init__(self):
         super().__init__()

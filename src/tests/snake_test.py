@@ -11,6 +11,6 @@ class testSnake(unittest.TestCase):
         self.assertEqual(self.snake.rect.y, 240)
 
     def test_move_changes_x_and_y(self):
-        self.snake.move(10, 10)
-        self.assertEqual(self.snake.rect.x, 330)
-        self.assertEqual(self.snake.rect.y, 250)
+        self.snake.move(20, 20)
+        self.assertEqual(self.snake.rect.x, 340)
+        self.assertEqual(self.snake.rect.y, 260)

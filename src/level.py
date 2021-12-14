@@ -44,7 +44,6 @@ class Level:
         return pygame.sprite.spritecollide(self.snake, self.apple_group, False)
 
     def crashed(self, display_width, display_height):
-        #display_size = pygame.display.get_surface().get_size()
         if (self.snake.rect.x >= display_width or self.snake.rect.x < 0
         or self.snake.rect.y >= display_height or self.snake.rect.y < 0):
             return True

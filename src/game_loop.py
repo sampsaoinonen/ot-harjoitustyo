@@ -18,17 +18,16 @@ class GameLoop:
     def start(self):
         while True:
             self._level.moving_snake_tail()
-            if self._handle_events() == False:
-                break
-            current_time = self._clock.get_ticks()##
-
+            if self._handle_events() is False:
+                break           
             self._render()
             if self._level.crashed(self._display_width, self._display_height):
-                break  # game over here!
+                return False  # game over here!
+
             self._clock.tick(10)
 
     def _handle_events(self):
-        for event in pygame.event.get():
+        for event in self._event_queue.get():
             if event.type == pygame.KEYDOWN:
                 ''' lets make sure snake cannot turn the opposite direction '''
                 if event.key == pygame.K_LEFT and self._direction != "right":
@@ -48,7 +47,7 @@ class GameLoop:
                     self._y_change = (self._cell_size)
                     self._direction = "down"
 
-            elif event.type == pygame.QUIT:                
+            elif event.type == pygame.QUIT:
                 return False
         self._level.move_snake(self._x_change, self._y_change)
 

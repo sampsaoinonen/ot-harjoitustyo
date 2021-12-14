@@ -17,4 +17,7 @@
 | 4.12. | 3    | Törmäykset seiniin ja itseensä |
 | 6.12. | 3    | Pylint pistemäärän kasvattamista |
 | 7.11. | 3    | Ohjelman rakenteen muokkaamista, sekvessikaavio ja toiminnallisuuden parantaminen |
-| yht.  | 52.5 |
+| 10.12.| 5    | Testien tekoa ja riippuvuuksien injektointiin tutustumista |
+| 12.12.| 5    | Menun tekemistä |
+| 14.12.| 4    | Menun säätämistä edelleen |
+| yht.  | 66.5 |

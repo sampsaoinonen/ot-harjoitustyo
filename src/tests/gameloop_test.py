@@ -62,3 +62,4 @@ class TestGameLoop(unittest.TestCase):
         pygame.init()
         game_loop.start()        
         self.assertTrue(self.level.crashed(display_width, display_height))
+
