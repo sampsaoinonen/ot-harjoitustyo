@@ -2,24 +2,43 @@ import pygame
 import sys, time
 from ui.button import Button
 from ui.text_box import TextBox
+from database.database_actions import DatabaseActions
 
 class Menu():
     def __init__(self, display):
         self.display = display
         self.bg = pygame.image.load("src/assets/snake_wallpaper.png")
+        self.name = ""
+        self.data_actions = DatabaseActions()
+        self.speed = 10
 
-    def start_screen(self):
-        self.play_image = pygame.image.load("src/assets/play.jpg")
-        self.play_button = Button(165, 100, self.play_image)
-        self.text_box = TextBox(165, 50, 100, 50)
+    def start_screen(self):        
+        self.jake_button = Button(320, 50,  "src/assets/jake.jpg", "src/assets/jake_off.jpg")
+        self.play_button = Button(320, 200,  "src/assets/play_off.jpg", "src/assets/play.jpg")
+        self.highscore_button = Button(320, 240, "src/assets/highscore_off.jpg", "src/assets/highscore.jpg")
+        self.options_button = Button(320, 280, "src/assets/options_off.jpg", "src/assets/options.jpg")
+        self.instructions_button = Button(320, 320, "src/assets/instructions_off.jpg", "src/assets/instructions.jpg")
+        self.text_box = TextBox(220, 140, 190, 33)
+
         while True:
             self.display.fill((0,0,0))
-            self.display.blit(self.bg, (0, 0))            
-
-            if self.play_button.draw(self.display):
-                break
+            self.display.blit(self.bg, (0, 0))
+            self.add_text(20, "Write you name:", 40, 150, (50, 20, 100))
             self.text_box.draw(self.display)
 
+            '''clicking a button with mouse handled here'''
+            if self.jake_button.draw(self.display):
+                break
+            if self.play_button.draw(self.display):
+                break
+            if self.highscore_button.draw(self.display):
+                self.highscore_screen(None)
+            if self.options_button.draw(self.display):
+                self.options_screen()
+            if self.instructions_button.draw(self.display):
+                self.instructions_screen()
+
+            '''Keyboard events are handled here'''
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -29,26 +48,106 @@ class Menu():
                         return False
                     if event.key == pygame.K_BACKSPACE:
                         self.text_box.erase()
-                    else:                        
-                        self.text_box.write_text(event.unicode)
+                    else:
+                        if len(self.name) < 15:
+                            self.text_box.write_text(event.unicode)
+                            self.name = self.text_box.text
             pygame.display.update()
-    
-    def end_screen(self, score):
-        game_over_font = pygame.font.SysFont('times new roman', 90)
-        game_over_surface = game_over_font.render('Game Over!', True, (255, 0 ,0))
-        game_over_rect = game_over_surface.get_rect()
-        game_over_rect.midtop = (pygame.display.get_surface().get_size()[0]/2, pygame.display.get_surface().get_size()[1]/8)
-        
-        score_font = pygame.font.SysFont('times new roman', 40)
-        score_surface = score_font.render("Your score is: " + str(score), True, (255, 0 ,0))
-        score_rect = score_surface.get_rect()
-        score_rect.midtop = (pygame.display.get_surface().get_size()[0]/2, pygame.display.get_surface().get_size()[1]/3)
-          
+
+    def highscore_screen(self, score):
         self.display.fill((0,0,0))
         self.display.blit(self.bg, (0, 0))
-        self.display.blit(game_over_surface, game_over_rect)
-        self.display.blit(score_surface, score_rect)   
-        pygame.display.flip()
-        time.sleep(5)
 
+        if self.data_actions.check_score(self.name, score):
+            self.add_text(30, "Congratulations! You are one of the best!", 40, 10, (255, 0, 0))
+
+        self.add_text(40, "TOP 5", 250, 50, (255, 255, 255))
+        self.main_button =  Button(320, 400,  "src/assets/main_off.jpg", "src/assets/main.jpg")
+
+        self.display_topfive()
+            
+
+        while True:
+            if self.main_button.draw(self.display):
+                return False
+            
+            for event in pygame.event.get(): 
+                if event.type == pygame.QUIT:
+                    return False
+            pygame.display.update()
+
+    def options_screen(self):
+        self.display.fill((0,0,0))
+        self.display.blit(self.bg, (0, 0))
+        self.add_text(50, "Set game speed:", 100, 50, (255, 255, 0))
+
+        self.slow_button =  Button(100, 150,  "src/assets/slow_off.jpg", "src/assets/slow.jpg")
+        self.normal_button = Button(250, 150, "src/assets/normal_off.jpg", "src/assets/normal.jpg")
+        self.fast_button =  Button(400, 150, "src/assets/fast_off.jpg", "src/assets/fast.jpg")
+        self.fastest_button =  Button(550, 150, "src/assets/fastest_off.jpg", "src/assets/fastest.jpg")
+
+        while True:
+            ''' changing the game speed'''
+            if self.slow_button.draw(self.display):
+                self.speed = 5
+                return False
+            if self.normal_button.draw(self.display):
+                self.speed = 10
+                return False
+            if self.fast_button.draw(self.display):
+                self.speed = 15
+                return False
+            if self.fastest_button.draw(self.display):
+                self.speed = 20
+                return False
+
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    return False
+            pygame.display.update()
+    
+    def instructions_screen(self):
+        self.display.fill((0,0,0))
+        self.display.blit(self.bg, (0, 0))
+
+        self.add_text(18, "This is a replica of the classic snake game well known from old Nokia phones.", 15, 20, (255, 255, 255))
+        self.add_text(18, "Snake can be moved using arrow keys. It’s simple to play.  It’s simple to play -", 15, 40, (255, 255, 255))
+        self.add_text(18, "just eat the apples and don’t hit the walls or yourself. The snake grows every ", 15, 60, (255, 255, 255))
+        self.add_text(18, "time it eats an apple. Game speed can be adjusted from options.", 15, 80, (255, 255, 255))
+        self.add_text(18, "Good luck eating them apples! ", 15, 100, (255, 255, 255))
+
+        self.main_button =  Button(320, 400,  "src/assets/main_off.jpg", "src/assets/main.jpg")
+
+        while True:
+            if self.main_button.draw(self.display):
+                return False
+            
+            for event in pygame.event.get(): 
+                if event.type == pygame.QUIT:
+                                return False
+            pygame.display.update()
+
+    def end_screen(self, score):
+        self.display.fill((0,0,0))
+        self.display.blit(self.bg, (0, 0))
+
+        self.add_text(80, "Game Over", 120, 20, (255, 0, 0))
+        self.add_text(40, "Your score is: " + str(score), 180, 120, (255, 0, 0))
+                                            
+        pygame.display.update()
+        time.sleep(3)
+        self.highscore_screen(score)
         
+    def add_text(self, font_size, text, x, y, color):
+        font = pygame.font.SysFont('helvetica', font_size)
+        disp_text = font.render(text, 1, color)
+        self.display.blit(disp_text, (x, y))
+
+    def display_topfive(self):
+        topfive = self.data_actions.get_topfive()
+        i = 0
+        order = 1
+        for top in topfive:
+            self.add_text(20, str(order) + ". " + top["username"] + "  " + str(top["score"]) + " points", 240, 120 + i, (255, 255, 255))
+            i += 30
+            order += 1   

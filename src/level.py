@@ -14,23 +14,11 @@ class Level:
         self.snake_tail_group = pygame.sprite.Group()
         self.apple = Apple()
         self.apple_group = pygame.sprite.Group()
-        self.apple_group.add(self.apple)
-        self.all_sprites = pygame.sprite.Group()  # check if needed
-        self.all_sprites.add(
-            self.snake_group,
-            self.snake_tail_group,
-            self.apple_group,
-        )
+        self.apple_group.add(self.apple)       
 
     def move_snake(self, moved_x, moved_y):
         self.snake.rect.move_ip(moved_x, moved_y)
-
-        if self.eaten():
-            self.apple_group.empty()
-            self.apple = Apple()
-            self.apple_group.add(self.apple)
-            self.snake_length += 1
-
+        
     def moving_snake_tail(self):
         snake_tail = SnakeTail(self.snake.rect.x, self.snake.rect.y)
         self.snake_tail_list.append(snake_tail)
@@ -41,7 +29,11 @@ class Level:
             self.snake_tail_group.add(tail)
 
     def eaten(self):
-        return pygame.sprite.spritecollide(self.snake, self.apple_group, False)
+        if pygame.sprite.spritecollide(self.snake, self.apple_group, False):
+            self.apple_group.empty()
+            self.apple = Apple()
+            self.apple_group.add(self.apple)
+            self.snake_length += 1
 
     def crashed(self, display_width, display_height):
         if (self.snake.rect.x >= display_width or self.snake.rect.x < 0

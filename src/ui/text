@@ -1,0 +1,9 @@
+import pygame
+from renderer import renderer
+
+class Text():
+    def __init__(self, font_size, text, color, location):
+        '''A class for adding text in pygame'''
+        self._font = pygame.font.Font(pygame.font.get_default_font(), font_size)        
+        self._text = self._font.render(text, False, color)
+        self._render.display.blit(text, location)
