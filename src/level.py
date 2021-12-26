@@ -15,11 +15,11 @@ class Level:
         self.snake_tail_group = pygame.sprite.Group()
         self.apple = Apple()
         self.apple_group = pygame.sprite.Group()
-        self.apple_group.add(self.apple)       
+        self.apple_group.add(self.apple)
 
     def move_snake(self, moved_x, moved_y):
         self.snake.rect.move_ip(moved_x, moved_y)
-        
+
     def moving_snake_tail(self):
         '''snakes position is used to keep on track with its tail'''
         snake_tail = SnakeTail(self.snake.rect.x, self.snake.rect.y)

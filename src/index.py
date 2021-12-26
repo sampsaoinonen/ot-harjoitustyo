@@ -26,12 +26,12 @@ def main():
         game_loop = GameLoop(level, renderer, event_queue,
                             clock, CELL_SIZE, display_width, display_height)
 
-   
+
         pygame.init()
-        menu.start_screen()                
+        menu.start_screen()
         game_loop.start(menu.speed)
         menu.end_screen(level.snake_length)
-        level = Level()        
+        level = Level()
 
 if __name__ == "__main__":
     main()
