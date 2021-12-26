@@ -24,9 +24,9 @@ Peli on yksinpeli ja käyttäjällä on roolina vain pelaaja. Käyttäjä kirjau
 
 ### Pelinäkymä
 
-- Pelaaja ohjaa käärmettä nuolinäppäimillä keräten omenoita ja väistellen seiniä sekä käärmeen häntää. .. TEHTY
-- Ruudun yläreunoissa näkyy kerätyt pisteet sekä käyttäjän nimi .. TEHTY lukuunottamatta käyttäjänäkymää
-- Osuma seinään tai käärmeen häntään lopettaa pelin ja siirtyy Game Over-näkymään. .. TEHTY lukuunottamatta Game Over-näkymää
+- Pelaaja ohjaa käärmettä nuolinäppäimillä keräten omenoita ja väistellen seiniä sekä käärmeen häntää. .
+- Ruudun yläreunoissa näkyy kerätyt pisteet sekä käyttäjän nimi 
+- Osuma seinään tai käärmeen häntään lopettaa pelin ja siirtyy Game Over-näkymään. 
 
 ### Game Over-näkymä
 
@@ -42,8 +42,13 @@ Peli on yksinpeli ja käyttäjällä on roolina vain pelaaja. Käyttäjä kirjau
 
 ![Käyttöliittymäluonnos](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliittymaluonnos.png)
 
+### Lopullisessa versiossa toteutuneet toiminnot
+
+Lopullinen versio vastaa hyvin alussa vaatimusmäärittelyssä kuvailtua toki esikuvakin oli selkeänä mielessä. Top10 listauksen 
+sijaan sovellus listaa Top5. Varsinainen rekisteröinti salasanoineen jäi pois. Ajattelin nimen tai nimimerkin riittävän 
+"old school"-pelien hengen mukaisesti. Ylimääräisenä ominaisuutena on Options-näkymä, josta saa vaihdettua pelin nopeutta.
+
 ## Jatkokehitysideat
 
 - Kaksinpeli paikallisesti samalla tietokoneella
-- Vaikeusasteen muuttaminen(nopeus, pituuden lisäys omenasta)
 - Peli tietokonetta vastaan, jossa molemmilla oma käärme, mutta yhteiset kerättävät omenat
