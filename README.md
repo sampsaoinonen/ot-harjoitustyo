@@ -45,7 +45,7 @@ Tässä vaiheessa soveluksessa on kolme näkymää:
 
 ### Linkit
 
-
+* [Käyttöohje](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/ohjeet.md)
 * [Vaatimusmäärittely](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 * [Tuntikirjanpito](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 * [Arkkitehtuuri](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
