@@ -35,13 +35,6 @@ Ohjelman koodin voi tarkistaa Pylint:llä  komennolla:
 ```bash
 poetry run invoke pylint
 ```
-### Pelaaminen
-
-Tässä vaiheessa soveluksessa on kolme näkymää: 
-
-* Alkuruutu, jossa kirjoitat nimesi ja pääset pelaamaan painamalla enter tai klikkaamalla hiirellä kuvaketta
-* Pelitila, joka lähtee käyntiin nuolinäppäintä painamalla. Pelissä keräät omenoita väistäen samalla seiniä sekä omaa häntää
-* Loppuruutu, johon päädyt törmättyäsi seinään tai itseesi. Samalla näet lopulliset pisteesi
 
 ### Linkit
 

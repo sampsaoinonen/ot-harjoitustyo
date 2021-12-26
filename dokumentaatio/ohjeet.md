@@ -1,5 +1,17 @@
 # Käyttöohje
 
+Ohjelman asennus tapahtuu komennolla:
+
+```bash
+poetry install
+```
+
+Ohjelman suorittaminen tapahtuu komennolla:
+
+```bash
+poetry run invoke start
+```
+
 ## Aloitusnäkymä 
 
 Aloitusnäkymässä voit kirjoittaa nimesi ja pääset pelaamaan joko enter-näppäimellä tai 
