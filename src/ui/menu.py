@@ -2,14 +2,14 @@ import pygame
 import sys, time
 from ui.button import Button
 from ui.text_box import TextBox
-from database.database_actions import DatabaseActions
+from database.user_repository import UserRepository
 
 class Menu():
     def __init__(self, display):
         self.display = display
         self.bg = pygame.image.load("src/assets/snake_wallpaper.png")
         self.name = ""
-        self.data_actions = DatabaseActions()
+        self.user_repository = UserRepository()
         self.speed = 10
 
     def start_screen(self):        
@@ -58,7 +58,7 @@ class Menu():
         self.display.fill((0,0,0))
         self.display.blit(self.bg, (0, 0))
 
-        if self.data_actions.check_score(self.name, score):
+        if self.user_repository.check_score(self.name, score):
             self.add_text(30, "Congratulations! You are one of the best!", 40, 10, (255, 0, 0))
 
         self.add_text(40, "TOP 5", 250, 50, (255, 255, 255))
@@ -111,10 +111,9 @@ class Menu():
         self.display.blit(self.bg, (0, 0))
 
         self.add_text(18, "This is a replica of the classic snake game well known from old Nokia phones.", 15, 20, (255, 255, 255))
-        self.add_text(18, "Snake can be moved using arrow keys. It’s simple to play.  It’s simple to play -", 15, 40, (255, 255, 255))
-        self.add_text(18, "just eat the apples and don’t hit the walls or yourself. The snake grows every ", 15, 60, (255, 255, 255))
-        self.add_text(18, "time it eats an apple. Game speed can be adjusted from options.", 15, 80, (255, 255, 255))
-        self.add_text(18, "Good luck eating them apples! ", 15, 100, (255, 255, 255))
+        self.add_text(18, "Snake can be moved using arrow keys. It’s simple to play - just eat the apples", 15, 40, (255, 255, 255))
+        self.add_text(18, "and don’t hit the walls or yourself. The snake grows every time it eats an apple.", 15, 60, (255, 255, 255))
+        self.add_text(18, "Game speed can be adjusted from options. Good luck eating them apples!", 15, 80, (255, 255, 255))        
 
         self.main_button =  Button(320, 400,  "src/assets/main_off.jpg", "src/assets/main.jpg")
 
@@ -144,7 +143,7 @@ class Menu():
         self.display.blit(disp_text, (x, y))
 
     def display_topfive(self):
-        topfive = self.data_actions.get_topfive()
+        topfive = self.user_repository.get_topfive()
         i = 0
         order = 1
         for top in topfive:

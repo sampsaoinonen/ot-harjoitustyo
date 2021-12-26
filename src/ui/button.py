@@ -1,6 +1,7 @@
 import pygame
 
 class Button():
+	'''Creates a pygame button used in ui'''
 	def __init__(self, x, y, image_off, image_on):
 		self.image_off = image_off
 		self.image_on = image_on				

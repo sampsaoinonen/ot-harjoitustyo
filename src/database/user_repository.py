@@ -1,6 +1,6 @@
 from database.database_connection import get_database_connection
 
-class DatabaseActions:
+class UserRepository:
     def __init__(self):        
         self._connection = get_database_connection()
     

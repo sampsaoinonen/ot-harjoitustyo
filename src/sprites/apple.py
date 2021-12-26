@@ -5,7 +5,7 @@ from load_image import load_image
 
 
 class Apple(pygame.sprite.Sprite):
-    ''' Places an apple in to a random place '''
+    ''' Creates and places an apple in to a random place '''
 
     def __init__(self):
         super().__init__()

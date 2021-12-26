@@ -37,7 +37,7 @@ display_width = 640
 display_height = 480
 cell_size = 320
 '''cell_size means how much the snake moves with one keydown. If snakes starting position
-is 320.240 by default then 320 to the right will hit the wall''
+is 320.240 by default then 320 to the right will hit the wall'''
 
 
 class TestGameLoop(unittest.TestCase):
@@ -60,6 +60,6 @@ class TestGameLoop(unittest.TestCase):
         )
         
         pygame.init()
-        game_loop.start()        
+        game_loop.start(10)        
         self.assertTrue(self.level.crashed(display_width, display_height))
 

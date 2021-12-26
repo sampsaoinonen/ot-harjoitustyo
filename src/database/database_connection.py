@@ -1,3 +1,4 @@
+'''creates a connection to database'''
 import os
 import sqlite3
 

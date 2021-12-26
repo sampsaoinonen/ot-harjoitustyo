@@ -1,7 +1,7 @@
 import pygame
 
 class GameLoop:
-    '''Sets up every thing needed to run event loop'''
+    '''Sets up every thing needed to run an event loop'''
 
     def __init__(self, level, renderer, event_queue, clock, cell_size, display_width, display_height):
         self._level = level
@@ -31,6 +31,7 @@ class GameLoop:
             self._clock.tick(game_speed)
 
     def _handle_events(self):
+        '''changes a key pressed down to direction for snake'''
         for event in self._event_queue.get():
             if event.type == pygame.KEYDOWN:
                 ''' lets make sure snake cannot turn the opposite direction '''

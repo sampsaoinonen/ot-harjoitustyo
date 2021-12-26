@@ -1,6 +1,7 @@
 import pygame
 
 class TextBox():
+    '''Creates a pygame textbox used in startingview'''
     def __init__(self, x, y, width, height):
         self.x = x
         self.y = y    
@@ -10,6 +11,7 @@ class TextBox():
         self.font = pygame.font.SysFont("helvetica", 18)
 
     def draw(self, surface):
+        '''sets up text inside the box'''
         self.image.fill((250,250,250))
         text = self.font.render(self.text, False, (100,100,100))
         self.image.blit(text, (15,15))

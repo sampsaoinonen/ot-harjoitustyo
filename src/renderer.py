@@ -2,6 +2,7 @@ import pygame
 
 
 class Renderer:
+    '''controls drawing everything on the screen'''
     def __init__(self, display, level, bg_color):
         self._display = display
         self._level = level
