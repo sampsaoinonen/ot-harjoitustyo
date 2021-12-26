@@ -7,35 +7,35 @@ from database.user_repository import UserRepository
 class Menu():
     def __init__(self, display):
         self.display = display
-        self.bg = pygame.image.load("src/assets/snake_wallpaper.png")
+        self._bg = pygame.image.load("src/assets/snake_wallpaper.png")
         self.name = ""
         self.user_repository = UserRepository()
         self.speed = 10
 
     def start_screen(self):        
-        self.jake_button = Button(320, 50,  "src/assets/jake.jpg", "src/assets/jake_off.jpg")
-        self.play_button = Button(320, 200,  "src/assets/play_off.jpg", "src/assets/play.jpg")
-        self.highscore_button = Button(320, 240, "src/assets/highscore_off.jpg", "src/assets/highscore.jpg")
-        self.options_button = Button(320, 280, "src/assets/options_off.jpg", "src/assets/options.jpg")
-        self.instructions_button = Button(320, 320, "src/assets/instructions_off.jpg", "src/assets/instructions.jpg")
-        self.text_box = TextBox(220, 140, 190, 33)
+        jake_button = Button(320, 50,  "src/assets/jake.jpg", "src/assets/jake_off.jpg")
+        play_button = Button(320, 200,  "src/assets/play_off.jpg", "src/assets/play.jpg")
+        highscore_button = Button(320, 240, "src/assets/highscore_off.jpg", "src/assets/highscore.jpg")
+        options_button = Button(320, 280, "src/assets/options_off.jpg", "src/assets/options.jpg")
+        instructions_button = Button(320, 320, "src/assets/instructions_off.jpg", "src/assets/instructions.jpg")
+        text_box = TextBox(220, 140, 190, 33)
 
         while True:
             self.display.fill((0,0,0))
-            self.display.blit(self.bg, (0, 0))
+            self.display.blit(self._bg, (0, 0))
             self.add_text(20, "Write you name:", 40, 150, (50, 20, 100))
-            self.text_box.draw(self.display)
+            text_box.draw(self.display)
 
             '''clicking a button with mouse handled here'''
-            if self.jake_button.draw(self.display):
+            if jake_button.draw(self.display):
                 break
-            if self.play_button.draw(self.display):
+            if play_button.draw(self.display):
                 break
-            if self.highscore_button.draw(self.display):
+            if highscore_button.draw(self.display):
                 self.highscore_screen(None)
-            if self.options_button.draw(self.display):
+            if options_button.draw(self.display):
                 self.options_screen()
-            if self.instructions_button.draw(self.display):
+            if instructions_button.draw(self.display):
                 self.instructions_screen()
 
             '''Keyboard events are handled here'''
@@ -50,25 +50,25 @@ class Menu():
                         self.text_box.erase()
                     else:
                         if len(self.name) < 15:
-                            self.text_box.write_text(event.unicode)
-                            self.name = self.text_box.text
+                            text_box.write_text(event.unicode)
+                            self.name = text_box.text
             pygame.display.update()
 
     def highscore_screen(self, score):
         self.display.fill((0,0,0))
-        self.display.blit(self.bg, (0, 0))
+        self.display.blit(self._bg, (0, 0))
 
         if self.user_repository.check_score(self.name, score):
             self.add_text(30, "Congratulations! You are one of the best!", 40, 10, (255, 0, 0))
 
         self.add_text(40, "TOP 5", 250, 50, (255, 255, 255))
-        self.main_button =  Button(320, 400,  "src/assets/main_off.jpg", "src/assets/main.jpg")
+        main_button =  Button(320, 400,  "src/assets/main_off.jpg", "src/assets/main.jpg")
 
         self.display_topfive()
             
 
         while True:
-            if self.main_button.draw(self.display):
+            if main_button.draw(self.display):
                 return False
             
             for event in pygame.event.get(): 
@@ -78,26 +78,26 @@ class Menu():
 
     def options_screen(self):
         self.display.fill((0,0,0))
-        self.display.blit(self.bg, (0, 0))
+        self.display.blit(self._bg, (0, 0))
         self.add_text(50, "Set game speed:", 100, 50, (255, 255, 0))
 
-        self.slow_button =  Button(100, 150,  "src/assets/slow_off.jpg", "src/assets/slow.jpg")
-        self.normal_button = Button(250, 150, "src/assets/normal_off.jpg", "src/assets/normal.jpg")
-        self.fast_button =  Button(400, 150, "src/assets/fast_off.jpg", "src/assets/fast.jpg")
-        self.fastest_button =  Button(550, 150, "src/assets/fastest_off.jpg", "src/assets/fastest.jpg")
+        slow_button =  Button(100, 150,  "src/assets/slow_off.jpg", "src/assets/slow.jpg")
+        normal_button = Button(250, 150, "src/assets/normal_off.jpg", "src/assets/normal.jpg")
+        fast_button =  Button(400, 150, "src/assets/fast_off.jpg", "src/assets/fast.jpg")
+        fastest_button =  Button(550, 150, "src/assets/fastest_off.jpg", "src/assets/fastest.jpg")
 
         while True:
             ''' changing the game speed'''
-            if self.slow_button.draw(self.display):
+            if slow_button.draw(self.display):
                 self.speed = 5
                 return False
-            if self.normal_button.draw(self.display):
+            if normal_button.draw(self.display):
                 self.speed = 10
                 return False
-            if self.fast_button.draw(self.display):
+            if fast_button.draw(self.display):
                 self.speed = 15
                 return False
-            if self.fastest_button.draw(self.display):
+            if fastest_button.draw(self.display):
                 self.speed = 20
                 return False
 
@@ -108,17 +108,17 @@ class Menu():
     
     def instructions_screen(self):
         self.display.fill((0,0,0))
-        self.display.blit(self.bg, (0, 0))
+        self.display.blit(self._bg, (0, 0))
 
         self.add_text(18, "This is a replica of the classic snake game well known from old Nokia phones.", 15, 20, (255, 255, 255))
         self.add_text(18, "Snake can be moved using arrow keys. It’s simple to play - just eat the apples", 15, 40, (255, 255, 255))
         self.add_text(18, "and don’t hit the walls or yourself. The snake grows every time it eats an apple.", 15, 60, (255, 255, 255))
         self.add_text(18, "Game speed can be adjusted from options. Good luck eating them apples!", 15, 80, (255, 255, 255))        
 
-        self.main_button =  Button(320, 400,  "src/assets/main_off.jpg", "src/assets/main.jpg")
+        main_button =  Button(320, 400,  "src/assets/main_off.jpg", "src/assets/main.jpg")
 
         while True:
-            if self.main_button.draw(self.display):
+            if main_button.draw(self.display):
                 return False
             
             for event in pygame.event.get(): 
@@ -128,7 +128,7 @@ class Menu():
 
     def end_screen(self, score):
         self.display.fill((0,0,0))
-        self.display.blit(self.bg, (0, 0))
+        self.display.blit(self._bg, (0, 0))
 
         self.add_text(80, "Game Over", 120, 20, (255, 0, 0))
         self.add_text(40, "Your score is: " + str(score), 180, 120, (255, 0, 0))
