@@ -43,5 +43,6 @@ poetry run invoke pylint
 * [Tuntikirjanpito](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 * [Arkkitehtuuri](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 * [Testausdokumentti](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/testausdokumentti.md)
+* [GitHub-release(Final)](https://github.com/sampsaoinonen/ot-harjoitustyo/archive/refs/tags/final.zip)
 * [GitHub-release(week5)](https://github.com/sampsaoinonen/ot-harjoitustyo/archive/refs/tags/viikko5.zip)
 * [GitHub-release(week6)](https://github.com/sampsaoinonen/ot-harjoitustyo/archive/refs/tags/viikko6.zip)
