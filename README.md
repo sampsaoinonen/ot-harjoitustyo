@@ -35,6 +35,13 @@ Ohjelman koodin voi tarkistaa Pylint:llä  komennolla:
 ```bash
 poetry run invoke pylint
 ```
+## Huomio Python-versiosta
+
+Sovelluksen toiminta on testattu Python-versiolla `3.8`.
+
+## Lataa peli
+
+[Tästä](https://github.com/sampsaoinonen/ot-harjoitustyo/archive/refs/tags/final.zip)
 
 ### Linkit
 
