@@ -20,4 +20,12 @@
 | 10.12.| 5    | Testien tekoa ja riippuvuuksien injektointiin tutustumista |
 | 12.12.| 5    | Menun tekemistä |
 | 14.12.| 4    | Menun säätämistä edelleen |
-| yht.  | 66.5 |
+| 17.12.| 4    | Menua |
+| 18.12.| 5    | Menun kuvia ja koodausta |
+| 20.12.| 5    | Tietokantojen yhdistämistä |
+| 21.12.| 4    | Testien tekoa |
+| 22.12.| 4    | Dokumenttien tekoa |
+| 24.12.| 3    | Docstringejä ja dokumentteja |
+| 26.12.| 5    | Loppusäätöä |
+
+| yht.  | 100 |
