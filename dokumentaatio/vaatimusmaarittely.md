@@ -47,7 +47,7 @@ Peli on yksinpeli ja käyttäjällä on roolina vain pelaaja. Käyttäjä kirjau
 Lopullinen versio vastaa hyvin alussa vaatimusmäärittelyssä kuvailtua toki esikuvakin oli selkeänä mielessä. Top10 listauksen 
 sijaan sovellus listaa Top5. Varsinainen rekisteröinti salasanoineen jäi pois. Ajattelin nimen tai nimimerkin riittävän 
 "old school"-pelien hengen mukaisesti. Ylimääräisenä ominaisuutena on Options-näkymä, josta saa vaihdettua pelin nopeutta.
-Tarkemmin toteutuneen version valikot näkee [Käyttöohje](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/ohjeet.md)
+Tarkemmin toteutuneen version näet: [Käyttöohje](https://github.com/sampsaoinonen/ot-harjoitustyo/blob/master/dokumentaatio/ohjeet.md)
 
 ## Jatkokehitysideat
 
